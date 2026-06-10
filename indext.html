@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookStore</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo" onclick="datLaiBoLoc()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+            <rect x="2" y="2" width="20" height="20" rx="4" fill="#6c5ce7"/>
+            <path d="M7 7H17V17H7V7Z" fill="white"/>
+          </svg>BookStore!
+        </div>
+
+        <div class="header-controls">
+          <div id="user-area" class="user-info"></div>
+          <button id="btn-auth-action" class="btn-auth" onclick="handleAuthAction()">
+            Đăng Nhập
+          </button>
+          <button class="btn-gio-hang" onclick="hienThiModalGioHang()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
+              <path d="M2.5 3C2.22386 3 2 3.22386 2 3.5V11C2 11.2761 2.22386 11.5 2.5 11.5H13.5C13.7761 11.5 14 11.2761 14 11V3.5C14 3.22386 13.7761 3 13.5 3H2.5ZM1 3.5C1 2.67157 1.67157 2 2.5 2H13.5C14.3284 2 15 2.67157 15 3.5V11C15 11.8284 14.3284 12.5 13.5 12.5H2.5C1.67157 12.5 1 11.8284 1 11V3.5ZM6 10C6 10.5523 5.55228 11 5 11C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9C5.55228 9 6 9.44772 6 10ZM12 10C12 10.5523 11.5523 11 11 11C10.4477 11 10 10.5523 10 10C10 9.44772 10.4477 9 11 9C11.5523 9 12 9.44772 12 10Z"/>
+            </svg> Giỏ hàng ( <span id="dem-so-luong">0</span> )
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="banner">
+        <h1 id="welcome-banner">Chào mừng tới BookStore!</h1>
+      </div>
+
+      <div class="bo-loc-khu-vuc">
+        <div class="o-nhap-lieu">
+          <label for="o-tim-kiem">Tìm kiếm tên sách / tác giả:</label>
+          <input type="text" id="o-tim-kiem" oninput="locDanhSachSach()" placeholder="Nhập tên sách cần tìm..." />
+        </div>
+
+        <div class="o-nhap-lieu">
+          <label for="loc-danh-muc">Chọn danh mục sách:</label>
+          <select id="loc-danh-muc" onchange="locDanhSachSach()">
+            <option value="Tất cả">Tất cả danh mục</option>
+            <option value="Kinh doanh">Kinh doanh & Khởi nghiệp</option>
+            <option value="Phát triển bản thân">Phát triển bản thân</option>
+            <option value="Công nghệ">Công nghệ thông tin</option>
+            <option value="Văn học">Văn học</option>
+            <option value="Tiểu thuyết">Tiểu thuyết</option>
+            <option value="Lịch sử">Lịch sử</option>
+            <option value="Nấu ăn">Nấu ăn</option>
+          </select>
+        </div>
+
+        <button class="btn-reset" onclick="datLaiBoLoc()">Đặt lại</button>
+      </div>
+
+      <div id="khong-tim-thay" class="khong-co-ket-qua">
+        ❌ Không tìm thấy cuốn sách nào khớp với từ khóa!
+      </div>
+
+      <div id="vung-danh-muc"></div>
+    </main>
+
+    <div id="auth-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="auth-modal-title">🔐 Đăng Nhập</h2>
+          <button class="btn-dong-modal" onclick="anModalAuth()">×</button>
+        </div>
+        <div class="modal-body">
+          <form id="auth-form" onsubmit="xuLySubmitAuth(event)">
+            <div class="form-group" id="group-reg-name" style="display: none">
+              <label for="auth-name">Họ và tên:</label>
+              <input type="text" id="auth-name" placeholder="Nhập tên đầy đủ của bạn" />
+            </div>
+            <div class="form-group">
+              <label for="auth-username">Tên tài khoản (Username):</label>
+              <input type="text" id="auth-username" required placeholder="Nhập tên tài khoản" />
+            </div>
+            <div class="form-group">
+              <label for="auth-password">Mật khẩu:</label>
+              <input type="password" id="auth-password" required placeholder="Nhập mật khẩu" />
+            </div>
+            <button type="submit" id="btn-auth-submit" class="btn-submit-auth">Đăng Nhập</button>
+          </form>
+          <div class="auth-switch" id="auth-switch-text">
+            Chưa có tài khoản? <span onclick="chuyenFormAuth('register')">Đăng ký ngay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gio-hang-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🛒 Giỏ Hàng Của Bạn</h2>
+          <button class="btn-dong-modal" onclick="anModalGioHang()">×</button>
+        </div>
+        <div class="modal-body" id="noi-dung-gio-hang"></div>
+        <div class="modal-footer">
+          <div class="tong-cong-khu">
+            <span>Tổng tiền:</span>
+            <span id="tong-tien-nhan">0đ</span>
+          </div>
+          <button class="btn-thanh-toan" onclick="thanhToanDonHang()">Thanh Toán Ngay</button>
+          <button class="btn-xoa-het" onclick="xoaToanBoGio()">Xóa toàn bộ giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="thong-bao-noi" class="hop-thong-bao"></div>
+
+    <footer>
+      © 2026 BookStore Pro - Hệ Thống Bán Sách Trực Tuyến Tự Động Phân Loại (Giao diện mới)
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
