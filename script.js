@@ -18,7 +18,28 @@
         { id: 17, title: 'Tư Duy Tối Ưu - First Things First', author: 'Stephen R. Covey', category: 'Phát triển bản thân', price: 160000, image: "https://cdn1.fahasa.com/media/catalog/product/d/f/dfd.jpg" },
         { id: 18, title: 'Thú Tội', author: 'Minato Kanae', category: 'Tiểu thuyết', price: 80000, image: 'https://cdn1.fahasa.com/media/catalog/product/8/9/8935235237247.jpg' },
         { id: 19, title: 'Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông', author: 'Agatha Christie', category: 'Tiểu thuyết', price: 95000, image: 'https://cdn1.fahasa.com/media/catalog/product/8/9/8934974177081.jpg' },
-        { id: 20, title: 'White heat', author: 'Marco Pierre White', category: 'Nấu ăn', price: 750000, image: 'https://m.media-amazon.com/images/I/512tChk85sL._SX342_SY445_ML2_.jpg' }
+        { id: 20, title: 'White heat', author: 'Marco Pierre White', category: 'Nấu ăn', price: 750000, image: 'https://m.media-amazon.com/images/I/512tChk85sL._SX342_SY445_ML2_.jpg' },//Easy the best chef in the world
+        {id:21,title:'Con Đường Đi Đến Thành Công Bằng Sự Tử Tế', author: 'Inamori Kazuo', category: 'Kinh doanh', price: 70000, image: 'https://cdn1.fahasa.com/media/catalog/product/n/x/nxbtrestoryfull_15432016_044349.jpg' },
+        {id:22,title:'Nhà Đầu Tư Thông Minh - Stock Market 101',author:'Michele Cagan',category:'Kinh doanh',price:200000,image:'https://cdn1.fahasa.com/media/catalog/product/z/7/z7087174511800_39e97e72856e976ce126a21184f3be61.jpg'},
+        {id:23,title:'Những đòn tâm lý trong thuyết phục',author:'Robert B Cialdini',category:'Kinh doanh',price:220000,image:'https://cdn1.fahasa.com/media/catalog/product/b/_/b_a-nhung-don-tam-ly-trong-thuyet-phuc.jpg'},
+        {id:24,title:'Tư Duy Để Thắng - Dám Thất Bại',author:'Billi P S Lim',category:'Kinh doanh',price:50000,image:'https://cdn1.fahasa.com/media/catalog/product/8/9/8934974179467.jpg'},
+        {id:25,title:'Cooking For One For Dummies',author:'Jennifer Fisher',category:'Nấu ăn',price:450000,image:'https://cdn1.fahasa.com/media/catalog/product/9/7/9781119886921_1.jpg'},
+        {id:26,title:'Khoa Học Về Nấu Ăn - The Science Of Cooking',author:'Stuart Farrimond',category:'Nấu ăn',price:350000,image:'https://cdn1.fahasa.com/media/catalog/product/i/m/image_226953_1.jpg'},
+        {id:27,title:'Nấu Ăn Bằng Cả Trái Tim',author:'Christine Hà',category:'Nấu ăn',price:300000,image:'https://simg.zalopay.com.vn/zlp-website/assets/sach_day_nau_an_ngon_Nau_An_Bang_Ca_Trai_Tim_6b52813805.jpg'},
+        {id:28,title:"Gordon Ramsay's Ultimate Cookery Course",author:'Gordon Ramsay',category:'Nấu ăn',price:590000,image:'https://simg.zalopay.com.vn/zlp-website/assets/sach_day_nau_an_ngon_Gordon_Ramsay_s_Ultimate_Cookery_Course_db2c6f1e97.jpg'},
+        {id:29,title:"Gordon Ramsay's Home Cooking",author:'Gordon Ramsay',category:'Nấu ăn',price:357000,image:'https://i.ebayimg.com/images/g/XDQAAeSwonJqKwPJ/s-l1600.webp'},
+        {id:30,title:'The Desert Game',author:'Reynold Poernomo',category:'Nấu ăn',price:'680000',image:'https://i.ebayimg.com/images/g/rQQAAOSwCVZhXuOd/s-l960.webp'},//My favorite pastry chef from Masterchef Australia
+        {id:31,title:'Công Nghiệp Tương Lai - The Industries Of The Future',author:'Alec Ross',category:'Công nghệ',price:120000,image:'https://cdn1.fahasa.com/media/catalog/product/i/m/image_195509_1_12548.jpg'},
+        {id:32,title:'The Pragmatic Programmer',author:'Andrew Hunt',category:'Công nghệ',price:135000,image:'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRXsxDHROEbvf8UebAd5ZG4uoqVrf6aVX2y0-YxYNO3LA2NSUSQrjWpoqzCbpxqQfW_CJCi6Du1s-Gyf7zQZUHEXsmNmHO4WNOZhuKl06PV&usqp=CAc'},
+        {id:33,title:'Coding With AI For Dummies',author:'Wiley',category:'Công nghệ',price:560000,image:'https://cdn1.fahasa.com/media/catalog/product/9/7/9781394249138.jpg'},
+        {id:34,title:'Java For Dummies',author: 'Barry A. Burd',category:'Công nghệ',price:690000,image:'https://cdn1.fahasa.com/media/catalog/product/9/7/9781394289240.jpg'},
+        {id:35,title:'Beginning Programming With Python For Dummies',author:'John Paul Mueller',category:'Công nghệ',price:560000,image:'https://cdn1.fahasa.com/media/catalog/product/9/7/9781119913771_1.jpg'},
+        {id:36,title:'Cây Cam Ngọt Của Tôi',author:'José Mauro de Vasconcelos',category:'Văn học',price:90000,image:'https://cdn1.fahasa.com/media/catalog/product/i/m/image_217480_1.jpg'},
+        {id:37,title:'Tuổi Thơ Dữ Dội - Tập 1',author:'Phùng Quán',category:'Văn học',price:80000,image:'https://cdn1.fahasa.com/media/catalog/product/i/m/image_187162.jpg'},
+        {id:38,title:'Tuổi Thơ Dữ Dội - Tập 2',author:'Phùng Quán',category:'Văn học',price:80000,image:'https://cdn1.fahasa.com/media/catalog/product/i/m/image_187163.jpg'},
+        {id:39,title:'Đại Việt Sử Ký Toàn Thư - Trọn Bộ',author:'Cao Huy Giu',category:'Lịch sử',price:200000,image:'https://cdn1.fahasa.com/media/catalog/product/8/9/8935236434515.jpg'},
+        {id:40,title:'Lịch Sử Thế Giới',author:'Nguyễn Hiến Lê, Thiên Giang',category:'Lịch sử',price:230000,image:'https://cdn1.fahasa.com/media/catalog/product/8/9/8935246956717.jpg'},
+        {id:41,title:'Tâm Lý Dân Tộc An Nam',author:'Paul Giran',category:'Lịch sử',price:870000,image:'https://cdn1.fahasa.com/media/catalog/product/i/m/image_188104.jpg'}
       ];
 
       let mangGioHang = [];
